@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_message"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="4dp"
+        android:background="@drawable/user_shape"
+        android:padding="14dp"
+        android:text="This is a Sample text"
+        android:textSize="14sp"
+        android:backgroundTint="#856BC3"
+        android:textColor="@color/white"
+        />
+    <TextView
+        android:layout_width="180dp"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_bot_message"
+        android:layout_alignParentStart="true"
+        android:layout_margin="4dp"
+        android:background="@drawable/bot_shape"
+        android:padding="14dp"
+        android:text="This is a Sample text"
+        android:textSize="14sp"
+        android:backgroundTint="#00ACC1"
+        android:textColor="@color/white"
+        />
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_bot_message"
+        android:background="@drawable/bot_shape"
+        android:layout_margin="4dp"
+        android:id="@+id/la"
+        android:backgroundTint="#00ACC1"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TimePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner"
+            android:id="@+id/timepicker"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round"
+            android:layout_margin="10dp"
+            android:text="Set Alarm"
+            android:id="@+id/alarmbtn"
+            android:textAllCaps="false"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round"
+            android:layout_margin="10dp"
+            android:text="Cancel"
+            android:id="@+id/cancelbtn"
+            android:textAllCaps="false"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="4dp"
+        android:id="@+id/la1"
+        android:background="@drawable/bot_shape"
+        android:backgroundTint="#00ACC1"
+        android:layout_below="@id/tv_bot_message"
+        android:visibility="gone"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter your progress"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_margin="6dp"
+            android:layout_gravity="center_horizontal"/>
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:id="@+id/progress"
+            android:padding="14dp"
+            android:layout_marginTop="4dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progress="0"
+            android:indeterminate="false"
+            android:progressTint="#F4D68D"
+            android:max="100"
+            />
+        <EditText
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:importantForAutofill="no"
+            android:id="@+id/progr_et"
+            android:padding="4dp"
+            android:hint="0"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:inputType="textShortMessage"/>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="4dp"
+        android:id="@+id/la2"
+        android:background="@drawable/bot_shape"
+        android:backgroundTint="#00ACC1"
+        android:padding="4dp"
+        android:layout_below="@id/tv_bot_message"
+        android:visibility="gone"
+        >
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/rbar"
+            android:stepSize="0.5"
+            android:progress="0"
+            android:backgroundTint="#333131"
+            android:progressTint="#F4D68D"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Thanks buddy !"
+            android:id="@+id/t1"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
